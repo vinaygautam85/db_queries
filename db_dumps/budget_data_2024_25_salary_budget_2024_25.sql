@@ -27,7 +27,7 @@ DROP TABLE IF EXISTS `salary_budget_2024_25`;
 CREATE TABLE `salary_budget_2024_25` (
   `ulb_name` varchar(100) NOT NULL,
   `ulb_hrms_code` varchar(10) DEFAULT NULL,
-  `emp_id` bigint DEFAULT NULL,
+  `emp_id` bigint NOT NULL,
   `pension_type` varchar(5) DEFAULT NULL,
   `pran` bigint DEFAULT NULL,
   `emp_name` varchar(100) DEFAULT NULL,
@@ -51,7 +51,7 @@ CREATE TABLE `salary_budget_2024_25` (
   `surrender_leave_encash` int DEFAULT NULL,
   `nps_contr_for_year` int DEFAULT NULL,
   `total` int DEFAULT NULL,
-  PRIMARY KEY (`ulb_name`)
+  PRIMARY KEY (`emp_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -61,6 +61,7 @@ CREATE TABLE `salary_budget_2024_25` (
 
 LOCK TABLES `salary_budget_2024_25` WRITE;
 /*!40000 ALTER TABLE `salary_budget_2024_25` DISABLE KEYS */;
+INSERT INTO `salary_budget_2024_25` VALUES ('Tumakuru','2201CC0123',911121651,'NPS',123456789123,'sxdfcsdfd','F','RO',43100,83900,43100,517200,'2025-01-01',1100,3300,520500,229020,41640,0,0,3434,'SFN',1500,32965,104933,933992),('Tumakuru','2201CC0123',911254678,'OPS',NULL,'sdfsdfsdfd','F','PK',17000,28950,17000,204000,'2024-07-01',400,3600,207600,91344,16608,2400,8400,4800,'PP',1200,13148,0,345500),('Tumakuru','2201CC0123',911257426,'NPS',110145623852,'dsdfsdfsd','M','CAUO',74400,109600,74400,892800,'2025-01-01',1900,5700,898500,395340,71880,0,0,6000,'SFN',1500,56905,181138,1611263);
 /*!40000 ALTER TABLE `salary_budget_2024_25` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -73,4 +74,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-10-10 17:36:58
+-- Dump completed on 2023-10-10 23:49:48

@@ -39,3 +39,9 @@ total int
 );
 
 select * from salary_budget_2024_25;
+
+desc salary_budget_2024_25;
+
+alter table salary_budget_2024_25 add primary key (emp_id);
+
+alter table salary_budget_2024_25 drop primary key;

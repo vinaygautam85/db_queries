@@ -18,10 +18,11 @@ CONTR_TYPE text(10),
 REMARKS text(100)
 );
 
+truncate upload_data;
 drop table upload_data;
 
-select * from upload_data;
-
-truncate upload_data;
+select count(*) from upload_data;
 
 select sum(GOVT_CONTR), sum(SELF_CONTR) from upload_data;
+
+desc upload_data;
